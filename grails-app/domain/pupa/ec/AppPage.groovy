@@ -1,13 +1,10 @@
 package pupa.ec
 
-class UserStory {
-	String userRole
-	String desiration
-	String motivation
+class AppPage {
+	byte[] image
 	
 	static hasMany = [userAcceptances: UserAcceptance]
-	
+
     static constraints = {
     }
-	
 }
