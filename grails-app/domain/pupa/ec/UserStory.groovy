@@ -2,7 +2,7 @@ package pupa.ec
 
 class UserStory {
 	String userRole
-	String desiration
+	String desire
 	String motivation
 	
 	static hasMany = [userAcceptances: UserAcceptance]
