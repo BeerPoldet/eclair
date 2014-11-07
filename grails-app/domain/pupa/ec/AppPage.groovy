@@ -3,10 +3,8 @@ package pupa.ec
 class AppPage {
 	byte[] image
 	
-	static hasMany = [userAcceptances: UserAcceptance]
+	static hasMany = [userAcceptanceAppPages: UserAcceptanceAppPage]
 	
-	UserAcceptance owner
-	static belongsTo = [UserAcceptance]
 
     static constraints = {
     }
