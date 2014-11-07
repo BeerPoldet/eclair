@@ -1,20 +1,19 @@
-// This is a manifest file that'll be compiled into application.js.
-//
-// Any JavaScript file within this directory can be referenced here using a relative path.
-//
-// You're free to add application-wide JavaScript to this file, but it's generally better 
-// to create separate JavaScript files as needed.
-//
-//= require jquery
-//= require_tree .
+//= require angular
+//= require angular-ui-router
+//= require user-story/user-story-module
 //= require_self
 
-if (typeof jQuery !== 'undefined') {
-	(function($) {
-		$('#spinner').ajaxStart(function() {
-			$(this).fadeIn();
-		}).ajaxStop(function() {
-			$(this).fadeOut();
-		});
-	})(jQuery);
-}
+/**
+* eclair Module
+*
+* Description
+*/
+var app = angular.module('eclair', ['ui.router', 'eclair.userStory'])
+
+.controller('TestCtrl', ['$scope', function($scope){
+	$scope.test = "Hello";
+}])
+
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise("/user-story");
+}]);
