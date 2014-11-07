@@ -7,5 +7,6 @@ class AppPage {
 	
 
     static constraints = {
+		image nullable : true
     }
 }
