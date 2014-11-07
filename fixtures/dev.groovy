@@ -10,5 +10,5 @@ fixture {
 	usAcp02(UserAcceptance, userStory : us02, details: 'Have Page 2 to reslove Something 2.')
 	usAcp03(UserAcceptance, userStory : us03, details: 'Have Page 3 to reslove Something 3.')
 	
-	ap01(AppPage, )
+	
 }
