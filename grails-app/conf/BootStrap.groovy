@@ -1,3 +1,4 @@
+import grails.util.Environment
 class BootStrap {
 def fixtureLoader
 
