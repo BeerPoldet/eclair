@@ -8,7 +8,7 @@ var module = angular.module('eclair.userStory', ['ui.router'])
 	$stateProvider
 	.state('user-story', {
 		url: "/user-story",
-		templateUrl: "detail.html"
+		templateUrl: "templates/user-story/detail.html"
 	})
 	// .state('user-story.list', {
 	// 	url: "/list",
