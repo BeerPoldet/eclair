@@ -1,5 +1,14 @@
+body {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
 .user-story-card {
-	
+	border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    max-width: 65%;
+    margin: 0 auto;
 }
 
 .user-story-card, .button-panel {
