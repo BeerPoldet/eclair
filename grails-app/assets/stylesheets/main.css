@@ -1,7 +1,7 @@
 html, body {
 	height: 100%;
 	margin: 0;
-	background-color: #E5E5E5;
+	/*background-color: #E5E5E5;*/
 	font-family: 'RobotoDraft', sans-serif;
 }
 
@@ -9,34 +9,40 @@ html, body {
 	.user-story-card {
 		max-width: 65%;
 		padding: 20px;
-		border-style: solid;
-		border-width: 1px;
-		border-radius: 5px;
+		border: 1px solid #9a9a9a;
+		border-radius: 4px;
 		margin: 50px auto;
 		
 	}
 }
 
-.user-story-card .button-panel {
+.button-panel {
 	padding-top: 8px;
 	padding-bottom: 8px;	
 	margin-bottom: 20px;
 	min-height: 34px;
 }
 
-.user-story-card .button-panel .button-panel-left {
+.button-panel .button-panel-left {
 	float: left !important;
 	vertical-align: middle;
 
 }
 
-.user-story-card .button-panel .button-panel-right {
+.button-panel .button-panel-right {
 	float: right !important;
 }
 
-button.btn {
+.btn {
 	line-height: 1.42857143;
 	padding: 6px 12px;
+	display: inline-block;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
 }
 
 .field {
@@ -56,7 +62,11 @@ button.btn {
 	width: 91.33333333%;
 }
 
-.field input {
+input {
+	border-radius: 4px;
+}
+
+.textfield input {
 	display: block;
 	width: 100%;
 	margin: 0;
@@ -78,8 +88,7 @@ button.btn {
 
 .user-acceptance-panel .header-panel {
 	min-height: 26px;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 16px;
 }
 
 .user-acceptance-panel .title {
@@ -91,4 +100,28 @@ button.btn {
 .user-acceptance-panel .button {
 	display: block;
 	float: right;
+}
+
+.user-acceptance-list {
+	padding-left: 0;
+}
+
+.list-item {
+	display: block;
+	padding: 5px 12px;
+	/*border: 1px solid #9a9a9a;*/
+	margin-bottom: -1px;
+}
+
+.list-item > .item-button-panel {
+	display: inline-block;
+	height: 31px;
+	width: 23%;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.list-item > .textfield {
+	display: inline-block;
+	width: 76%;
 }
