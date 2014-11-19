@@ -10,23 +10,38 @@ class UserStoryController {
 		if (request.method == 'GET') {
 			render(UserStory.list() as JSON)
 		} else if (request.method == 'POST') {
-			log.debug params
-			def userStoryInstance = new UserStory(userRole : params.userRole, desire: params.desire, motivation: params.motivation, userAcceptances: params.userAcceptances);
+			UserStory userStoryInstance = params.id ? updateUserAcceptance(params) : createUserAcceptance(params)
 
 			try{
-				userStoryInstance.save(failOnError: true)
+				userStoryInstance.validate()
+				userStoryInstance.save()
 				responseWithFormat(request, OK)
 			}catch(Exception e){
-				//		            form multipartForm {
-				//		                flash.message = message(code: 'default.deleted.message', args: [message(code: 'UserAcceptance.label', default: 'UserAcceptance'), userAcceptanceInstance.id])
-				//		                redirect action:"index", method:"GET"
-				//		            }
 				log.error e.message
+				log.error userStoryInstance.errors
+//				e.printStackTrace()
 				responseWithFormat(request, BAD_REQUEST)
 			}
 
 		}
 
+	}
+	
+	private updateUserAcceptance(params) {
+		log.debug params
+		def userStoryInstance = UserStory.get(params.id as Long)
+		userStoryInstance.properties = params
+		userStoryInstance
+	}
+	
+	private createUserAcceptance(params) {
+		def userAcceptanceList = JSON.parse(params.userAcceptances) as List
+		def userAcceptanceInstanceList = userAcceptanceList.collect { userAcceptance ->
+			new UserAcceptance(details: userAcceptance.details)
+		}
+		
+		def userStoryInstance = new UserStory(userRole : params.userRole, desire: params.desire, motivation: params.motivation, userAcceptances: userAcceptanceInstanceList)
+		userStoryInstance
 	}
 
 	private responseWithFormat (request, status){
