@@ -2,8 +2,8 @@ package pupa.ec
 
 class UserAcceptance {
 	static belongsTo = [userStory: UserStory]
-	
-	static hasMany = [appPages: AppPage]
+	String details
+	static hasMany = [userAcceptanceAppPages: UserAcceptanceAppPage]
 
     static constraints = {
     }

@@ -1,9 +1,14 @@
-import pupa.ec.UserStory
-
+import grails.util.Environment
 class BootStrap {
+def fixtureLoader
 
     def init = { servletContext ->
-		new UserStory(userRole: "Dec", desire: "The Shining", motivation:"????", userAcceptances: []).save()
+		
+		Environment.executeForCurrentEnvironment {
+			development {
+				fixtureLoader.load('dev')
+			}
+		}
     }
     def destroy = {
     }

@@ -117,3 +117,5 @@ log4j.main = {
 	debug  'grails.app.controllers'
 	       'grails.app.services'
 }
+
+grails.resources.adhoc.includes = ['/templates/**', '/css/**', '/js/**', '/images/**']
