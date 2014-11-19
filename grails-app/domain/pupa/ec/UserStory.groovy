@@ -1,4 +1,6 @@
 package pupa.ec
+import grails.rest.*
+
 
 class UserStory {
 	String userRole
