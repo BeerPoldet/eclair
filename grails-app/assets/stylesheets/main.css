@@ -1,8 +1,57 @@
 html, body {
 	height: 100%;
 	margin: 0;
-	/*background-color: #E5E5E5;*/
-	font-family: 'RobotoDraft', sans-serif;
+	background-color: #E5E5E5;
+}
+
+.col-1 {
+	float: left;
+	width: 10%;
+}
+
+.col-2 {
+	float: left;
+	width: 20%;
+}
+
+.col-3 {
+	float: left;
+	width: 30%;
+}
+
+.col-4 {
+	float: left;
+	width: 40%;
+}
+
+.col-5 {
+	float: left;
+	width: 50%;
+}
+
+.col-6 {
+	float: left;
+	width: 60%;
+}
+
+.col-7 {
+	float: left;
+	width: 70%;
+}
+
+.col-8 {
+	float: left;
+	width: 80%;
+}
+
+.col-9 {
+	float: left;
+	width: 90%;
+}
+
+.col-10 {
+	float: left;
+	width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -12,7 +61,7 @@ html, body {
 		border: 1px solid #9a9a9a;
 		border-radius: 4px;
 		margin: 50px auto;
-		
+		background-color: #ffffff;
 	}
 }
 
@@ -33,7 +82,7 @@ html, body {
 	float: right !important;
 }
 
-.btn {
+/*.btn {
 	line-height: 1.42857143;
 	padding: 6px 12px;
 	display: inline-block;
@@ -43,38 +92,37 @@ html, body {
 	color: #333;
 	background-color: #fff;
 	border-color: #ccc;
-}
+}*/
 
 .field {
 	width: 100%;
 	display: table;
 	padding: 6px 12px;
 }
-.field .label {
+.field .label-ec {
 	display: block;
 	float: left;
-	width: 8.33333333%;
 }
 
 .field .textfield {
 	display: block;
 	float: left;
-	width: 91.33333333%;
 }
 
 input {
 	border-radius: 4px;
-}
-
-.textfield input {
+	border: 1px solid #ccc;
 	display: block;
 	width: 100%;
 	margin: 0;
 	padding: 6px 12px;
 	box-sizing: border-box;
+	line-height: 1.467;
 }
 
-.field textarea {
+textarea {
+	border-radius: 4px;
+	border: 1px solid #ccc;
 	display: block;
 	width: 100%;
 	margin: 0;
@@ -87,41 +135,46 @@ input {
 }
 
 .user-acceptance-panel .header-panel {
-	min-height: 26px;
 	padding-top: 16px;
+	display: inline-block;
+	width: 100%;
 }
 
 .user-acceptance-panel .title {
 	font-size: 1.4em;
-	display: block;
+	display: inline-block;
 	float: left;
+
 }
 
 .user-acceptance-panel .button {
-	display: block;
+	/* Make it vertical center */
+	display: inline-block;
 	float: right;
+	vertical-align: middle;
+	height: 100%;
 }
 
 .user-acceptance-list {
-	padding-left: 0;
+	padding: 5px;
 }
 
 .list-item {
-	display: block;
-	padding: 5px 12px;
+	display: inline-block;
+	width: 100%;
 	/*border: 1px solid #9a9a9a;*/
 	margin-bottom: -1px;
 }
 
 .list-item > .item-button-panel {
-	display: inline-block;
 	height: 31px;
-	width: 23%;
 	vertical-align: middle;
 	height: 100%;
+	float: right;
 }
 
 .list-item > .textfield {
-	display: inline-block;
-	width: 76%;
+	padding: 0px 10px;
+	float: left;
+	width: 95%;
 }

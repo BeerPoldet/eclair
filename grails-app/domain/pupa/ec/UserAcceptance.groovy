@@ -6,5 +6,6 @@ class UserAcceptance {
 	static hasMany = [userAcceptanceAppPages: UserAcceptanceAppPage]
 
     static constraints = {
+		userAcceptanceAppPages nullable: true
     }
 }

@@ -8,6 +8,7 @@ class UserStory {
 	static hasMany = [userAcceptances: UserAcceptance]
 	
     static constraints = {
+		userAcceptances nullable: true
     }
 	
 }

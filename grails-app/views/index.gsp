@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 	<head>
-		<title>Welcome to Grails</title>
+		<title>Eclair Project</title>
 		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
 	</head>
